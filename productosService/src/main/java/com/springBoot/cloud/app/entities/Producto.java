@@ -14,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
@@ -63,4 +64,8 @@ public class Producto{
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idCategoria")
 	private Categoria categoria;
+	
+	//Atributo que indica en que puerto del balanceo de carga se procesó
+	@Transient
+	private int puerto_balanceo;
 }

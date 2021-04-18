@@ -27,7 +27,7 @@ public class ProductoRestController {
 	private ProductoServices productoServices;
 	
 	@GetMapping("/productos")
-	public List<Producto> obtenerListaPersonas(){
+	public List<Producto> obtenerListaProductos(){
 		return productoServices.obtenerListaProductos();	
 	}
 	
